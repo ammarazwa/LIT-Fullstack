@@ -1,0 +1,5 @@
+Product Sales Report
+--------------------
+Laptop: $3600,00
+Mouse: $175,00
+Keyboard: $225,00

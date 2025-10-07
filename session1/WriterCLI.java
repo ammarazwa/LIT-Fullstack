@@ -7,17 +7,19 @@ class MyClass {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Masukkan nama: ");
-        String name = scanner.nextLine(); 
+        String name = scanner.nextLine();  
 
         System.out.print("Masukkan Tinggi: ");
-        int height = scanner.nextInt(); 
+        int height = scanner.nextInt();  
 
         PrintWriter writer2 = new PrintWriter(System.out); 
+        writer2.println("\n---OUTPUT HERE---");
         writer2.println("Nama: " + name);
         writer2.println("Tinggi Badan: " + height + " cm");
-        writer2.close();
+        writer2.close(); 
 
         try (PrintWriter writer = new PrintWriter("output.txt")) {
+            writer.println("\n---OUTPUT HERE---");
             writer.println("Nama: " + name);
             writer.println("Tinggi Badan: " + height + " cm");
         } catch (IOException e) {
