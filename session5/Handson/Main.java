@@ -7,5 +7,7 @@ public class Main {
 
         Rina.tampilkanInfo();
         Budi.tampilkanInfo();
+
+        System.out.println("\nJumlah total pegawai: " + Pegawai.getJumlahPegawai());
     }
 }

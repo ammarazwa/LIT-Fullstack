@@ -19,4 +19,8 @@ public class Pegawai {
         System.out.println("Nama: " + nama);
         System.out.println("Gaji Pokok: Rp" + gajiPokok);
     }
+
+    public static int getJumlahPegawai() {
+        return jumlahPegawai;
+    }
 }
