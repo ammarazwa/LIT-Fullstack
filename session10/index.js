@@ -3,67 +3,58 @@ const portfolio = [
   { symbol: "MSFT", shares: 10, buyPrice: 310.50, currentPrice: 405.12 },
   { symbol: "NVDA", shares: 5,  buyPrice: 450.00, currentPrice: 870.42 },
   { symbol: "GOOGL", shares: 12, buyPrice: 120.30, currentPrice: 165.10 },
-];
+  { symbol: "TSLA", shares: 8, buyPrice: 220.00, currentPrice: 255.75 },
+  { symbol: "AMZN", shares: 15, buyPrice: 130.00, currentPrice: 182.35 },
+  { symbol: "META", shares: 6, buyPrice: 280.00, currentPrice: 460.12 },
+  { symbol: "NFLX", shares: 4, buyPrice: 390.00, currentPrice: 495.50 },
+  { symbol: "INTC", shares: 20, buyPrice: 34.50, currentPrice: 42.80 },
+  { symbol: "ADBE", shares: 7, buyPrice: 480.00, currentPrice: 550.25 },
+]
 
-const fmtMoney = v =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(v);
-
-const pad = (s, n) => String(s).padEnd(n);
-
-function summarize(positions) {
+function summarize(positions){
   const rows = positions.map(p => {
-    const invested = p.shares * p.buyPrice;
-    const valueNow = p.shares * p.currentPrice;
-    const pnl = valueNow - invested;
-    const ret = invested === 0 ? 0 : (pnl / invested) * 100;
-    return { ...p, invested, valueNow, pnl, ret };
-  });
+    const invested = p.shares * p.buyPrice
+    const valueNow = p.shares * p.currentPrice
+    const pnl = valueNow - invested
+    const ret = invested === 0 ? 0 : (pnl / invested) * 100
+    return {...p, invested, valueNow, pnl, ret}
+  })
 
-  const totals = rows.reduce(
-    (acc, r) => {
-      acc.invested += r.invested;
-      acc.valueNow += r.valueNow;
-      acc.pnl += r.pnl;
-      return acc;
-    },
-    { invested: 0, valueNow: 0, pnl: 0 }
-  );
-  totals.ret = totals.invested === 0 ? 0 : (totals.pnl / totals.invested) * 100;
-
-  return { rows, totals };
+  let totals = {invested:0, valueNow:0, pnl:0}
+  for(let i=0; i<rows.length; i++){
+    totals.invested += rows[i].invested
+    totals.valueNow += rows[i].valueNow
+    totals.pnl += rows[i].pnl
+  }
+  totals.ret = (totals.pnl / totals.invested) * 100
+  return {rows, totals}
 }
 
-function buildReport(positions) {
-  const { rows, totals } = summarize(positions);
+function buildReport(positions){
+  let hasil = summarize(positions)
+  let rows = hasil.rows
+  let total = hasil.totals
 
-let report = `
-Portfolio Report:
-=================
-`.trimStart();
+  let text = ""
+  text += "Portfolio Report\n"
+  text += "=============================\n"
+  text += "Stock | Shares | Buy | Current | Invested | Value | P/L | Return\n"
+  text += "---------------------------------------------------------------\n"
 
-  report += `\n${pad("Stock", 8)} ${pad("Shares", 8)} ${pad("Buy", 12)} ${pad(
-    "Current",
-    12
-  )} ${pad("Invested", 12)} ${pad("Value", 12)} ${pad("P/L", 12)} Return\n`;
-  report += `${"-".repeat(90)}\n`;
+  for(let i=0; i<rows.length; i++){
+    let r = rows[i]
+    text += r.symbol + " | " + r.shares + " | $" + r.buyPrice.toFixed(2) + " | $" + r.currentPrice.toFixed(2)
+    text += " | $" + r.invested.toFixed(2) + " | $" + r.valueNow.toFixed(2) + " | $" + r.pnl.toFixed(2)
+    text += " | " + r.ret.toFixed(2) + "%\n"
+  }
 
-  rows.forEach(r => {
-    report += `${pad(r.symbol, 8)} ${pad(r.shares, 8)} ${pad(fmtMoney(r.buyPrice), 12)} ${pad(
-      fmtMoney(r.currentPrice),
-      12
-    )} ${pad(fmtMoney(r.invested), 12)} ${pad(fmtMoney(r.valueNow), 12)} ${pad(
-      fmtMoney(r.pnl),
-      12
-    )} ${r.ret.toFixed(2)}%\n`;
-  });
+  text += "---------------------------------------------------------------\n"
+  text += "Total Invested : $" + total.invested.toFixed(2) + "\n"
+  text += "Total Value    : $" + total.valueNow.toFixed(2) + "\n"
+  text += "Total P/L      : $" + total.pnl.toFixed(2) + "\n"
+  text += "Performance    : " + total.ret.toFixed(2) + "%\n"
 
-  report += `${"-".repeat(90)}\n`;
-  report += `Total Invested : ${fmtMoney(totals.invested)}\n`;
-  report += `Total Value    : ${fmtMoney(totals.valueNow)}\n`;
-  report += `Total P/L      : ${fmtMoney(totals.pnl)}\n`;
-  report += `Performance    : ${totals.ret.toFixed(2)}%\n`;
-
-  return report;
+  return text
 }
 
-console.log(buildReport(portfolio));
+console.log(buildReport(portfolio))
