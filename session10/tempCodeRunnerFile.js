@@ -1,0 +1,5 @@
+text += "---------------------------------------------------------------\n"
+  text += "Total Invested : $" + total.invested.toFixed(2) + "\n"
+  text += "Total Value    : $" + total.valueNow.toFixed(2) + "\n"
+  text += "Total P/L      : $" + total.pnl.toFixed(2) + "\n"
+  text += "Performance    : " + total.ret.toFixed(2) + "%\n"
