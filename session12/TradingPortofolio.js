@@ -1,4 +1,10 @@
-// Trading Portfolio Manager Class
+// Requirements:
+// 1. Add stocks to portfolio
+// 2. Remove stocks from portfolio
+// 3. Calculate total portfolio value
+// 4. Calculate profit/loss for each stock
+// 5. Calculate overall portfolio performance
+// 6. Generate portfolio report
 
 class PortfolioManager {
   constructor() {
@@ -6,17 +12,18 @@ class PortfolioManager {
   }
 
   // Cari index saham
-  _findIdx(symbol) {
+  findIdx(symbol) {
     return this.stocks.findIndex(s => s.symbol === symbol);
   }
 
-  // Add / Upsert: gabungkan & average buy price
+  // 1. Add stocks to portfolio
+  // gabungkan & average buy price
   addStock(symbol, shares, buyPrice, currentPrice) {
     if (shares <= 0 || buyPrice <= 0 || currentPrice <= 0) {
       console.log("Invalid input: shares and prices must be positive numbers.");
       return;
     }
-    const idx = this._findIdx(symbol);
+    const idx = this.findIdx(symbol);
     if (idx === -1) {
       this.stocks.push({ symbol, shares, buyPrice, currentPrice });
     } else {
@@ -34,9 +41,10 @@ class PortfolioManager {
     }
   }
 
-  // Partial/Full remove: jual sebagian atau semua
+  // 2. Remove stocks from portfolio
+  // jual sebagian atau semua
   removeStock(symbol, qty = null) {
-    const idx = this._findIdx(symbol);
+    const idx = this.findIdx(symbol);
     if (idx === -1) {
       console.log(`Stock ${symbol} not found in portfolio.`);
       return;
@@ -55,7 +63,7 @@ class PortfolioManager {
 
   // Update harga 1 simbol
   setCurrentPrice(symbol, newPrice) {
-    const idx = this._findIdx(symbol);
+    const idx = this.findIdx(symbol);
     if (idx === -1) {
       console.log(`Stock ${symbol} not found.`);
       return;
@@ -74,6 +82,7 @@ class PortfolioManager {
     }
   }
 
+  // 3. Calculate total portfolio value
   // Nilai total sekarang
   calculateTotalValue() {
     return this.stocks.reduce((sum, s) => sum + s.shares * s.currentPrice, 0);
@@ -84,7 +93,8 @@ class PortfolioManager {
     return this.stocks.reduce((sum, s) => sum + s.shares * s.buyPrice, 0);
   }
 
-  // PnL per saham
+  // 4. Calculate profit/loss for each stock
+  // Profit n Loss per saham
   calculatePnL(stock) {
     const invested = stock.shares * stock.buyPrice;
     const valueNow = stock.shares * stock.currentPrice;
@@ -93,7 +103,7 @@ class PortfolioManager {
     return { invested, valueNow, pnl, ret };
   }
 
-  // Kinerja keseluruhan
+  // 5. Calculate overall portfolio performance
   calculatePerformance() {
     let totalInvested = 0;
     let totalValue = 0;
@@ -130,8 +140,8 @@ class PortfolioManager {
     });
   }
 
-  // Report dengan opsi sort
-  generateReport({ sortBy = "symbol" } = {}) {
+// 6. Generate portfolio report  
+generateReport({ sortBy = "symbol" } = {}) {
     const summary = this.calculatePerformance();
     const weights = Object.fromEntries(this.getWeights().map(w => [w.symbol, w.weight]));
 
@@ -181,19 +191,6 @@ class PortfolioManager {
     return report;
   }
 
-  // Optional: export JSON ringkas
-  toJSON() {
-    const perf = this.calculatePerformance();
-    return {
-      holdings: this.stocks.map(s => ({
-        symbol: s.symbol,
-        shares: s.shares,
-        avgBuy: s.buyPrice,
-        price: s.currentPrice
-      })),
-      performance: perf
-    };
-  }
 }
 
 // ====== Demo ======
