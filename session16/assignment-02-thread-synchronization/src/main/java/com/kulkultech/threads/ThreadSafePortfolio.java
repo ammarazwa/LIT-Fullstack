@@ -18,7 +18,7 @@ package com.kulkultech.threads;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ThreadSafePortfolioSolution {
+public class ThreadSafePortfolio {
     private final Map<String, Integer> stockHoldings = new HashMap<>();
     private final Object lock = new Object();
     private double totalValue = 0.0;

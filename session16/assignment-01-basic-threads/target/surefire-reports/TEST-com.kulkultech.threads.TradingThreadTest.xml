@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.kulkultech.threads.TradingThreadTest" time="0.474" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.kulkultech.threads.TradingThreadTest" time="0.525" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ID"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\maraa\AppData\Local\Temp\surefire13786686431674819495\surefirebooter-20251106000703848_3.jar C:\Users\maraa\AppData\Local\Temp\surefire13786686431674819495 2025-11-06T00-06-53_840-jvmRun1 surefire-20251106000703848_1tmp surefire_0-20251106000703848_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\maraa\AppData\Local\Temp\surefire5279064139911817972\surefirebooter-20251106001409491_3.jar C:\Users\maraa\AppData\Local\Temp\surefire5279064139911817972 2025-11-06T00-14-08_290-jvmRun1 surefire-20251106001409491_1tmp surefire_0-20251106001409491_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\amaraa belajar\LIT-Fullstack\session16\assignment-01-basic-threads\target\test-classes;C:\amaraa belajar\LIT-Fullstack\session16\assignment-01-basic-threads\target\classes;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\maraa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\maraa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\maraa\AppData\Local\Temp\surefire13786686431674819495\surefirebooter-20251106000703848_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\maraa\AppData\Local\Temp\surefire5279064139911817972\surefirebooter-20251106001409491_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -51,7 +51,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\maraa\Downloads\WINDOWS.X64_193000_db_home\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-22\bin;C:\Program Files\nodejs\;C:\Program Files\Ampps\php82;C:\ProgramData\ComposerSetup;C:\ProgramData\ComposerSetup\bin;C:\Program Files\7-Zip;C:\Users\maraa\miniconda3\condabin;C:\Program Files\nodejs;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.11\bin;C:\Users\maraa\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\maraa\AppData\Local\Programs\Python\Python312\;C:\Users\maraa\AppData\Local\Programs\Python\Launcher\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\maraa\AppData\Local\Microsoft\WindowsApps;C:\Users\maraa\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;C:\Users\maraa\AppData\Roaming\npm;C:\Users\maraa\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\maraa\AppData\Roaming\Composer\vendor\bin;C:\Users\maraa\Oracle;C:\Program Files\nodejs;C:\Program Files\swipl\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.2\bin;C:\Users\maraa\.dotnet\tools;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.11\bin;C:\Users\maraa\Downloads\WINDOWS.X64_193000_db_home\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-22\bin;C:\Program Files\nodejs\;C:\Program Files\Ampps\php82;C:\ProgramData\ComposerSetup;C:\ProgramData\ComposerSetup\bin;C:\Program Files\7-Zip;C:\Users\maraa\miniconda3\condabin;C:\Program Files\nodejs;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Users\maraa\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\maraa\AppData\Local\Programs\Python\Python312\;C:\Users\maraa\AppData\Local\Programs\Python\Launcher\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\maraa\AppData\Local\Microsoft\WindowsApps;C:\Users\maraa\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;C:\Users\maraa\AppData\Roaming\npm;C:\Users\maraa\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\maraa\AppData\Roaming\Composer\vendor\bin;C:\Users\maraa\Oracle;C:\Program Files\nodejs;C:\Program Files\swipl\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.2\bin;C:\Users\maraa\.dotnet\tools;c:\Users\maraa\.vscode\extensions\vscjava.vscode-java-debug-0.58.3\bundled\scripts\noConfigScripts;c:\Users\maraa\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\maraa\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\scripts\noConfigScripts;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -59,23 +59,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="testThreadName" classname="com.kulkultech.threads.TradingThreadTest" time="0.074"/>
-  <testcase name="testThreadExecution" classname="com.kulkultech.threads.TradingThreadTest" time="0.121">
+  <testcase name="testThreadName" classname="com.kulkultech.threads.TradingThreadTest" time="0.091"/>
+  <testcase name="testThreadExecution" classname="com.kulkultech.threads.TradingThreadTest" time="0.149">
     <system-out><![CDATA[Processing trade for GOOGL at $2850.0
 Trade completed for GOOGL
 ]]></system-out>
   </testcase>
   <testcase name="testThreadCreation" classname="com.kulkultech.threads.TradingThreadTest" time="0.005"/>
-  <testcase name="testMultipleThreads" classname="com.kulkultech.threads.TradingThreadTest" time="0.116">
-    <system-out><![CDATA[Processing trade for AAPL at $150.25
-Processing trade for GOOGL at $2850.0
+  <testcase name="testMultipleThreads" classname="com.kulkultech.threads.TradingThreadTest" time="0.112">
+    <system-out><![CDATA[Processing trade for GOOGL at $2850.0
+Processing trade for AAPL at $150.25
 Processing trade for MSFT at $310.5
-Trade completed for MSFT
 Trade completed for GOOGL
 Trade completed for AAPL
+Trade completed for MSFT
 ]]></system-out>
   </testcase>
-  <testcase name="testThreadState" classname="com.kulkultech.threads.TradingThreadTest" time="0.106">
+  <testcase name="testThreadState" classname="com.kulkultech.threads.TradingThreadTest" time="0.107">
     <system-out><![CDATA[Processing trade for TSLA at $250.75
 Trade completed for TSLA
 ]]></system-out>
