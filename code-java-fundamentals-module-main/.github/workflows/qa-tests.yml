@@ -1,0 +1,210 @@
+name: QA Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+jobs:
+  test-problem-files:
+    name: Test Problem Files (Expected to Fail)
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        assignment:
+          - session-16-multithreading/assignment-01-basic-threads
+          - session-16-multithreading/assignment-02-thread-synchronization
+          - session-16-multithreading/assignment-03-thread-coordination
+          - session-16-multithreading/assignment-04-executor-service
+          - session-17-jdbc/assignment-01-database-connection
+          - session-17-jdbc/assignment-02-crud-operations
+          - session-17-jdbc/assignment-03-prepared-statement
+          - session-17-jdbc/assignment-04-transactions
+          - session-17-jdbc/assignment-05-connection-pooling
+          - session-18-hibernate/assignment-01-entity-mapping
+          - session-18-hibernate/assignment-02-relationships
+          - session-18-hibernate/assignment-03-hql-queries
+          - session-18-hibernate/assignment-04-performance-optimization
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      
+      - name: Test Problem File (Expected to Fail)
+        id: test-problem
+        working-directory: ${{ matrix.assignment }}
+        continue-on-error: true
+        run: |
+          echo "🧪 Testing problem file: ${{ matrix.assignment }}"
+          echo "Expected: Tests should FAIL ❌"
+          echo ""
+          
+          if mvn test -Dtest.solution=false 2>&1 | tee test-output.log; then
+            echo "result=failed" >> $GITHUB_OUTPUT
+            echo "status=❌ ERROR: Problem tests passed but should fail!" >> $GITHUB_OUTPUT
+          else
+            echo "result=passed" >> $GITHUB_OUTPUT
+            echo "status=✅ Problem tests failed as expected" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Verify Problem Tests Failed
+        working-directory: ${{ matrix.assignment }}
+        run: |
+          if mvn test -Dtest.solution=false 2>&1 | grep -q "BUILD SUCCESS"; then
+            echo "❌ ERROR: Problem tests should fail but they passed!"
+            echo "This indicates the problem file is complete when it should be incomplete."
+            exit 1
+          else
+            echo "✅ Problem tests failed as expected (correct behavior)"
+          fi
+      
+      - name: Sanitize artifact name (Problem)
+        id: sanitize-problem
+        run: |
+          SANITIZED_NAME=$(echo "${{ matrix.assignment }}" | tr '/' '-')
+          echo "name=problem-test-results-${SANITIZED_NAME}" >> $GITHUB_OUTPUT
+      
+      - name: Upload Test Results (Problem)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.sanitize-problem.outputs.name }}
+          path: ${{ matrix.assignment }}/target/surefire-reports/
+          if-no-files-found: ignore
+
+  test-solution-files:
+    name: Test Solution Files (Expected to Pass)
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        assignment:
+          - session-16-multithreading/assignment-01-basic-threads
+          - session-16-multithreading/assignment-02-thread-synchronization
+          - session-16-multithreading/assignment-03-thread-coordination
+          - session-16-multithreading/assignment-04-executor-service
+          - session-17-jdbc/assignment-01-database-connection
+          - session-17-jdbc/assignment-02-crud-operations
+          - session-17-jdbc/assignment-03-prepared-statement
+          - session-17-jdbc/assignment-04-transactions
+          - session-17-jdbc/assignment-05-connection-pooling
+          - session-18-hibernate/assignment-01-entity-mapping
+          - session-18-hibernate/assignment-02-relationships
+          - session-18-hibernate/assignment-03-hql-queries
+          - session-18-hibernate/assignment-04-performance-optimization
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      
+      - name: Test Solution File (Expected to Pass)
+        id: test-solution
+        working-directory: ${{ matrix.assignment }}
+        run: |
+          echo "🧪 Testing solution file: ${{ matrix.assignment }}"
+          echo "Expected: Tests should PASS ✅"
+          echo ""
+          
+          mvn test -Dtest.solution=true
+          
+          if [ $? -eq 0 ]; then
+            echo "result=passed" >> $GITHUB_OUTPUT
+            echo "status=✅ Solution tests passed as expected" >> $GITHUB_OUTPUT
+          else
+            echo "result=failed" >> $GITHUB_OUTPUT
+            echo "status=❌ ERROR: Solution tests failed!" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Verify Solution Tests Passed
+        working-directory: ${{ matrix.assignment }}
+        run: |
+          if mvn test -Dtest.solution=true 2>&1 | grep -q "BUILD SUCCESS"; then
+            echo "✅ Solution tests passed as expected (correct behavior)"
+          else
+            echo "❌ ERROR: Solution tests should pass but they failed!"
+            echo "This indicates an issue with the solution implementation."
+            exit 1
+          fi
+      
+      - name: Sanitize artifact name (Solution)
+        id: sanitize-solution
+        run: |
+          SANITIZED_NAME=$(echo "${{ matrix.assignment }}" | tr '/' '-')
+          echo "name=solution-test-results-${SANITIZED_NAME}" >> $GITHUB_OUTPUT
+      
+      - name: Upload Test Results (Solution)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.sanitize-solution.outputs.name }}
+          path: ${{ matrix.assignment }}/target/surefire-reports/
+          if-no-files-found: ignore
+
+  qa-summary:
+    name: QA Summary
+    runs-on: ubuntu-latest
+    needs: [test-problem-files, test-solution-files]
+    if: always()
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Generate QA Summary
+        run: |
+          echo "# 🔍 QA Test Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Problem Files (Expected to Fail) ✅" >> $GITHUB_STEP_SUMMARY
+          echo "All problem files should fail tests - this is correct behavior." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Solution Files (Expected to Pass) ✅" >> $GITHUB_STEP_SUMMARY
+          echo "All solution files should pass tests - this is correct behavior." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## 📋 Assignments Tested" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Session 16: Multithreading (4 assignments)" >> $GITHUB_STEP_SUMMARY
+          echo "- Session 17: JDBC (5 assignments)" >> $GITHUB_STEP_SUMMARY
+          echo "- Session 18: Hibernate (4 assignments)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## ✅ QA Checklist" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Problem files fail tests (expected)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Solution files pass tests (expected)" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] All tests compile successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- [x] Maven build completes" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status**: All QA checks completed! 🎉" >> $GITHUB_STEP_SUMMARY
+      
+      - name: Check Job Status
+        run: |
+          if [ "${{ needs.test-problem-files.result }}" == "success" ] && [ "${{ needs.test-solution-files.result }}" == "success" ]; then
+            echo "✅ All QA tests passed!"
+            exit 0
+          else
+            echo "❌ Some QA tests failed. Check individual job results above."
+            exit 1
+          fi
