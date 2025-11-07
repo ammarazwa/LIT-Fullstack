@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.kulkultech.hibernate.TradingAccountTest" time="5.646" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping\target\test-classes;C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping\target\classes;C:\Users\maraa\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\maraa\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\maraa\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\maraa\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\maraa\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\maraa\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\maraa\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\maraa\.m2\repository\net\bytebuddy\byte-buddy\1.14.7\byte-buddy-1.14.7.jar;C:\Users\maraa\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\maraa\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\maraa\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\maraa\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\maraa\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\maraa\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\maraa\.m2\repository\com\mysql\mysql-connector-j\8.2.0\mysql-connector-j-8.2.0.jar;C:\Users\maraa\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\Users\maraa\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\maraa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\maraa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\maraa\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\maraa\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Jakarta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ID"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="C:\Users\maraa\AppData\Local\Temp\surefire15542853649474486878\surefirebooter-20251107212756897_3.jar C:\Users\maraa\AppData\Local\Temp\surefire15542853649474486878 2025-11-07T21-27-55_776-jvmRun1 surefire-20251107212756897_1tmp surefire_0-20251107212756897_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping\target\test-classes;C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping\target\classes;C:\Users\maraa\.m2\repository\org\hibernate\orm\hibernate-core\6.3.1.Final\hibernate-core-6.3.1.Final.jar;C:\Users\maraa\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\maraa\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\maraa\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\maraa\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\maraa\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\maraa\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\maraa\.m2\repository\net\bytebuddy\byte-buddy\1.14.7\byte-buddy-1.14.7.jar;C:\Users\maraa\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\maraa\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\maraa\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\maraa\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\maraa\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\maraa\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\maraa\.m2\repository\org\antlr\antlr4-runtime\4.10.1\antlr4-runtime-4.10.1.jar;C:\Users\maraa\.m2\repository\com\mysql\mysql-connector-j\8.2.0\mysql-connector-j-8.2.0.jar;C:\Users\maraa\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\Users\maraa\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\maraa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\maraa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\maraa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\maraa\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;C:\Users\maraa\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\maraa\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\maraa"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\maraa\AppData\Local\Temp\surefire15542853649474486878\surefirebooter-20251107212756897_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.2+9-70"/>
+    <property name="user.name" value="maraa"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\maraa\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\maraa\AppData\Local\Temp\"/>
+    <property name="test.solution" value=""/>
+    <property name="java.version" value="22.0.2"/>
+    <property name="user.dir" value="C:\amaraa belajar\LIT-Fullstack\session18\assignment-01-entity-mapping"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\maraa\Downloads\WINDOWS.X64_193000_db_home\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-22\bin;C:\Program Files\nodejs\;C:\Program Files\Ampps\php82;C:\ProgramData\ComposerSetup;C:\ProgramData\ComposerSetup\bin;C:\Program Files\7-Zip;C:\Users\maraa\miniconda3\condabin;C:\Program Files\nodejs;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.11\bin;C:\Users\maraa\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\maraa\AppData\Local\Programs\Python\Python312\;C:\Users\maraa\AppData\Local\Programs\Python\Launcher\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\maraa\AppData\Local\Microsoft\WindowsApps;C:\Users\maraa\AppData\Local\Programs\Microsoft VS Code\bin;C:\mingw64\bin;C:\Users\maraa\AppData\Roaming\npm;C:\Users\maraa\AppData\Local\Microsoft\WinGet\Packages\Schniz.fnm_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\maraa\AppData\Roaming\Composer\vendor\bin;C:\Users\maraa\Oracle;C:\Program Files\nodejs;C:\Program Files\swipl\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.2\bin;C:\Users\maraa\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testEntityRetrieve" classname="com.kulkultech.hibernate.TradingAccountTest" time="0.38">
+    <system-out><![CDATA[Hibernate: 
+    drop table if exists trading_accounts cascade 
+Hibernate: 
+    create table trading_accounts (
+        balance numeric(15,2) not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6),
+        account_type varchar(20) not null,
+        account_name varchar(100) not null,
+        primary key (id)
+    )
+Hibernate: 
+    insert 
+    into
+        trading_accounts
+        (account_name, account_type, balance, created_at, is_active, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ta1_0.id,
+        ta1_0.account_name,
+        ta1_0.account_type,
+        ta1_0.balance,
+        ta1_0.created_at,
+        ta1_0.is_active,
+        ta1_0.updated_at 
+    from
+        trading_accounts ta1_0 
+    where
+        ta1_0.id=?
+]]></system-out>
+    <system-err><![CDATA[Nov 07, 2025 9:27:58 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.3.1.Final
+Nov 07, 2025 9:27:59 PM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+INFO: HHH000026: Second-level cache disabled
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: org.h2.Driver
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1]
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=sa}
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 20 (min=1)
+Nov 07, 2025 9:28:00 PM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl constructDialect
+WARN: HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+Nov 07, 2025 9:28:03 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Nov 07, 2025 9:28:03 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2ca54da9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Nov 07, 2025 9:28:03 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3815146b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+]]></system-err>
+  </testcase>
+  <testcase name="testEntityPersist" classname="com.kulkultech.hibernate.TradingAccountTest" time="0.006">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        trading_accounts
+        (account_name, account_type, balance, created_at, is_active, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+  <testcase name="testLifecycleCallbacks" classname="com.kulkultech.hibernate.TradingAccountTest" time="0.004">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        trading_accounts
+        (account_name, account_type, balance, created_at, is_active, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+  <testcase name="testEntityUpdate" classname="com.kulkultech.hibernate.TradingAccountTest" time="0.043">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        trading_accounts
+        (account_name, account_type, balance, created_at, is_active, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        ta1_0.id,
+        ta1_0.account_name,
+        ta1_0.account_type,
+        ta1_0.balance,
+        ta1_0.created_at,
+        ta1_0.is_active,
+        ta1_0.updated_at 
+    from
+        trading_accounts ta1_0 
+    where
+        ta1_0.id=?
+Hibernate: 
+    update
+        trading_accounts 
+    set
+        account_name=?,
+        account_type=?,
+        balance=?,
+        is_active=?,
+        updated_at=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ta1_0.id,
+        ta1_0.account_name,
+        ta1_0.account_type,
+        ta1_0.balance,
+        ta1_0.created_at,
+        ta1_0.is_active,
+        ta1_0.updated_at 
+    from
+        trading_accounts ta1_0 
+    where
+        ta1_0.id=?
+]]></system-out>
+  </testcase>
+</testsuite>
