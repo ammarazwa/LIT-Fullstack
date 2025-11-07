@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Koneksi -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/trading_db?useSSL=false&amp;serverTimezone=Asia/Jakarta
+        </property>
+        <property name="hibernate.connection.username">trading_user</property>
+        <property name="hibernate.connection.password">secure_password</property>
+
+        <!-- HikariCP -->
+        <property name="hibernate.connection.provider_class">
+            org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+        </property>
+        <property name="hibernate.hikari.minimumIdle">5</property>
+        <property name="hibernate.hikari.maximumPoolSize">20</property>
+        <property name="hibernate.hikari.idleTimeout">300000</property>
+
+        <!-- SQL logging -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+
+        <!-- Schema management -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Optional: matikan cache dulu agar tidak perlu provider -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+
+        <!-- Entities -->
+        <mapping class="org.example.trading.model.TradingAccount"/>
+        <mapping class="org.example.trading.model.Portfolio"/>
+        <mapping class="org.example.trading.model.Trade"/>
+        <mapping class="org.example.trading.model.Stock"/>
+        <mapping class="org.example.trading.model.Position"/>
+    </session-factory>
+</hibernate-configuration>
