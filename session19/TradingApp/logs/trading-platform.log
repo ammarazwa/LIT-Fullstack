@@ -1,0 +1,100 @@
+2025-11-11T23:18:10.795+07:00  INFO 15316 --- [trading-platform] [main] org.example.TradingApplication           : Starting TradingApplication using Java 22.0.2 with PID 15316 (C:\amaraa belajar\LIT-Fullstack\session19\TradingApp\target\classes started by maraa in C:\amaraa belajar\LIT-Fullstack\session19\TradingApp)
+2025-11-11T23:18:10.799+07:00  INFO 15316 --- [trading-platform] [main] org.example.TradingApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-11-11T23:18:11.698+07:00  INFO 15316 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-11T23:18:11.738+07:00  INFO 15316 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-11-11T23:18:12.620+07:00  INFO 15316 --- [trading-platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-11T23:18:12.645+07:00  INFO 15316 --- [trading-platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-11T23:18:12.645+07:00  INFO 15316 --- [trading-platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-11T23:18:12.764+07:00  INFO 15316 --- [trading-platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-11T23:18:12.764+07:00  INFO 15316 --- [trading-platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1901 ms
+2025-11-11T23:18:13.012+07:00  INFO 15316 --- [trading-platform] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-11T23:18:13.113+07:00  INFO 15316 --- [trading-platform] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-11T23:18:13.175+07:00  INFO 15316 --- [trading-platform] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-11T23:18:13.677+07:00  INFO 15316 --- [trading-platform] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-11T23:18:13.719+07:00  INFO 15316 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-11T23:18:14.082+07:00  INFO 15316 --- [trading-platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74a85515
+2025-11-11T23:18:14.084+07:00  INFO 15316 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-11T23:18:14.139+07:00  WARN 15316 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-11T23:18:14.141+07:00  WARN 15316 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-11T23:18:14.471+07:00  INFO 15316 --- [trading-platform] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-11T23:18:14.477+07:00  INFO 15316 --- [trading-platform] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:18:14.541+07:00  WARN 15316 --- [trading-platform] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-11T23:18:15.161+07:00  INFO 15316 --- [trading-platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-11T23:18:15.174+07:00  INFO 15316 --- [trading-platform] [main] org.example.TradingApplication           : Started TradingApplication in 5.257 seconds (process running for 5.957)
+2025-11-11T23:18:46.168+07:00  INFO 15316 --- [trading-platform] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-11T23:18:46.169+07:00  INFO 15316 --- [trading-platform] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-11T23:18:46.180+07:00  INFO 15316 --- [trading-platform] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-11-11T23:21:24.978+07:00  INFO 15316 --- [trading-platform] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:21:24.980+07:00  INFO 15316 --- [trading-platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-11T23:21:24.986+07:00  INFO 15316 --- [trading-platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-11T23:24:29.958+07:00  INFO 37212 --- [trading-platform] [main] org.example.TradingApplication           : Starting TradingApplication using Java 22.0.2 with PID 37212 (C:\amaraa belajar\LIT-Fullstack\session19\TradingApp\target\classes started by maraa in C:\amaraa belajar\LIT-Fullstack\session19\TradingApp)
+2025-11-11T23:24:29.964+07:00  INFO 37212 --- [trading-platform] [main] org.example.TradingApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-11-11T23:24:31.181+07:00  INFO 37212 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-11T23:24:31.216+07:00  INFO 37212 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-11-11T23:24:32.183+07:00  INFO 37212 --- [trading-platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-11T23:24:32.208+07:00  INFO 37212 --- [trading-platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-11T23:24:32.209+07:00  INFO 37212 --- [trading-platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-11T23:24:32.334+07:00  INFO 37212 --- [trading-platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-11T23:24:32.335+07:00  INFO 37212 --- [trading-platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2274 ms
+2025-11-11T23:24:32.573+07:00  INFO 37212 --- [trading-platform] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-11T23:24:32.656+07:00  INFO 37212 --- [trading-platform] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-11T23:24:32.713+07:00  INFO 37212 --- [trading-platform] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-11T23:24:33.235+07:00  INFO 37212 --- [trading-platform] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-11T23:24:33.282+07:00  INFO 37212 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-11T23:24:33.813+07:00  INFO 37212 --- [trading-platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a39e554
+2025-11-11T23:24:33.817+07:00  INFO 37212 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-11T23:24:33.899+07:00  WARN 37212 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-11T23:24:33.900+07:00  WARN 37212 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-11T23:24:34.348+07:00  INFO 37212 --- [trading-platform] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-11T23:24:34.356+07:00  INFO 37212 --- [trading-platform] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:24:34.454+07:00  WARN 37212 --- [trading-platform] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-11T23:24:35.054+07:00  INFO 37212 --- [trading-platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-11T23:24:35.071+07:00  INFO 37212 --- [trading-platform] [main] org.example.TradingApplication           : Started TradingApplication in 6.066 seconds (process running for 6.794)
+2025-11-11T23:24:44.531+07:00  INFO 37212 --- [trading-platform] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-11T23:24:44.531+07:00  INFO 37212 --- [trading-platform] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-11T23:24:44.533+07:00  INFO 37212 --- [trading-platform] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-11-11T23:25:03.068+07:00  INFO 36180 --- [trading-platform] [main] org.example.TradingApplication           : Starting TradingApplication using Java 22.0.2 with PID 36180 (C:\amaraa belajar\LIT-Fullstack\session19\TradingApp\target\classes started by maraa in C:\amaraa belajar\LIT-Fullstack\session19\TradingApp)
+2025-11-11T23:25:03.070+07:00  INFO 36180 --- [trading-platform] [main] org.example.TradingApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-11-11T23:25:03.661+07:00  INFO 36180 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-11T23:25:03.678+07:00  INFO 36180 --- [trading-platform] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2025-11-11T23:25:04.112+07:00  INFO 36180 --- [trading-platform] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-11T23:25:04.126+07:00  INFO 36180 --- [trading-platform] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-11T23:25:04.126+07:00  INFO 36180 --- [trading-platform] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-11T23:25:04.187+07:00  INFO 36180 --- [trading-platform] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-11T23:25:04.188+07:00  INFO 36180 --- [trading-platform] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-11-11T23:25:04.305+07:00  INFO 36180 --- [trading-platform] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-11T23:25:04.363+07:00  INFO 36180 --- [trading-platform] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-11T23:25:04.400+07:00  INFO 36180 --- [trading-platform] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-11T23:25:04.687+07:00  INFO 36180 --- [trading-platform] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-11T23:25:04.719+07:00  INFO 36180 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-11T23:25:04.995+07:00  INFO 36180 --- [trading-platform] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45e11627
+2025-11-11T23:25:04.997+07:00  INFO 36180 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-11T23:25:05.038+07:00  WARN 36180 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-11T23:25:05.040+07:00  WARN 36180 --- [trading-platform] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-11-11T23:25:05.345+07:00  INFO 36180 --- [trading-platform] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-11T23:25:05.350+07:00  INFO 36180 --- [trading-platform] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:25:05.392+07:00  WARN 36180 --- [trading-platform] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-11T23:25:05.790+07:00  WARN 36180 --- [trading-platform] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-11-11T23:25:05.793+07:00  INFO 36180 --- [trading-platform] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:25:05.795+07:00  INFO 36180 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-11T23:25:05.803+07:00  INFO 36180 --- [trading-platform] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-11T23:25:05.815+07:00  INFO 36180 --- [trading-platform] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-11T23:25:05.842+07:00 ERROR 36180 --- [trading-platform] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-11-11T23:31:22.720+07:00  INFO 37212 --- [trading-platform] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11T23:31:22.727+07:00  INFO 37212 --- [trading-platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-11T23:31:22.749+07:00  INFO 37212 --- [trading-platform] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
