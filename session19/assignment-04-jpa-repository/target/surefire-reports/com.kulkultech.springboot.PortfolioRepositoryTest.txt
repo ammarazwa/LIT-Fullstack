@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.kulkultech.springboot.PortfolioRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 9.816 s <<< FAILURE! - in com.kulkultech.springboot.PortfolioRepositoryTest
+com.kulkultech.springboot.PortfolioRepositoryTest.testFindByName  Time elapsed: 1.077 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem repository should not be injectable when incomplete ==> expected: <null> but was: <org.springframework.data.jpa.repository.support.SimpleJpaRepository@71e2ddd>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:284)
+	at com.kulkultech.springboot.PortfolioRepositoryTest.testFindByName(PortfolioRepositoryTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.springboot.PortfolioRepositoryTest.testFindByBalanceGreaterThan  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem repository should not be injectable when incomplete ==> expected: <null> but was: <org.springframework.data.jpa.repository.support.SimpleJpaRepository@71e2ddd>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:284)
+	at com.kulkultech.springboot.PortfolioRepositoryTest.testFindByBalanceGreaterThan(PortfolioRepositoryTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.springboot.PortfolioRepositoryTest.testFindWealthyPortfolios  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem repository should not be injectable when incomplete ==> expected: <null> but was: <org.springframework.data.jpa.repository.support.SimpleJpaRepository@71e2ddd>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:284)
+	at com.kulkultech.springboot.PortfolioRepositoryTest.testFindWealthyPortfolios(PortfolioRepositoryTest.java:95)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.springboot.PortfolioRepositoryTest.testRepositoryExists  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem repository should not be injectable when incomplete ==> expected: <null> but was: <org.springframework.data.jpa.repository.support.SimpleJpaRepository@71e2ddd>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:284)
+	at com.kulkultech.springboot.PortfolioRepositoryTest.testRepositoryExists(PortfolioRepositoryTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
