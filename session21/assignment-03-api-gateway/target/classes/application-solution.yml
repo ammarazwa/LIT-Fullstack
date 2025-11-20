@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: portfolio-service
+          uri: lb://portfolio-service
+          predicates:
+            - Path=/api/portfolios/**
+        
+        - id: trade-service
+          uri: lb://trade-service
+          predicates:
+            - Path=/api/trades/**
+
+server:
+  port: 8080
+
