@@ -1,4 +1,4 @@
-package org.example.trading.exception;
+package org.example.trading.api.exception;
 
 @RestControllerAdvice
 public class TradingApiExceptionHandler extends ResponseEntityExceptionHandler {

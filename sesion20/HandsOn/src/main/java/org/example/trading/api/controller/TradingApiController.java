@@ -1,4 +1,4 @@
-package org.example.trading.controller;
+package org.example.trading.api.controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.*;

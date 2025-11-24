@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: com.kulkultech.restapi.PortfolioControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 5.705 s <<< FAILURE! - in com.kulkultech.restapi.PortfolioControllerTest
+com.kulkultech.restapi.PortfolioControllerTest.testUpdatePortfolio  Time elapsed: 1.922 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.PortfolioControllerTest.testUpdatePortfolio(PortfolioControllerTest.java:144)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.PortfolioControllerTest.testCreatePortfolio  Time elapsed: 0.085 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.PortfolioControllerTest.testCreatePortfolio(PortfolioControllerTest.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.PortfolioControllerTest.testDeletePortfolio  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.PortfolioControllerTest.testDeletePortfolio(PortfolioControllerTest.java:183)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.PortfolioControllerTest.testGetAllPortfolios  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.PortfolioControllerTest.testGetAllPortfolios(PortfolioControllerTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.PortfolioControllerTest.testGetPortfolio  Time elapsed: 0.011 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.PortfolioControllerTest.testGetPortfolio(PortfolioControllerTest.java:75)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

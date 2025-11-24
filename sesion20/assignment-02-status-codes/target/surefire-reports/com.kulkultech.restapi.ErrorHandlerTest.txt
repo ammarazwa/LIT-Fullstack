@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.kulkultech.restapi.ErrorHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.607 s <<< FAILURE! - in com.kulkultech.restapi.ErrorHandlerTest
+com.kulkultech.restapi.ErrorHandlerTest.testDeleteReturns204  Time elapsed: 1.965 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.ErrorHandlerTest.testDeleteReturns204(ErrorHandlerTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.ErrorHandlerTest.testNotFoundReturns404  Time elapsed: 0.03 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.ErrorHandlerTest.testNotFoundReturns404(ErrorHandlerTest.java:92)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+com.kulkultech.restapi.ErrorHandlerTest.testCreateReturns201  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Problem implementation should be incomplete - test should fail
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.kulkultech.restapi.ErrorHandlerTest.testCreateReturns201(ErrorHandlerTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

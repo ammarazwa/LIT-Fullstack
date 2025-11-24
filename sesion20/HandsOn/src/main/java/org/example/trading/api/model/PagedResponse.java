@@ -1,4 +1,4 @@
 package org.example.trading.api.model;
 
-public class PagedResponse {
+public class PagedResponse<T> {
 }

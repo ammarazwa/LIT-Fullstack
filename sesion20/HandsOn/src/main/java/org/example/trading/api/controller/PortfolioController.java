@@ -1,4 +1,4 @@
-package org.example.trading.controller;
+package org.example.trading.api.controller;
 
 @RestController
 @RequestMapping("/api/v1/portfolios")

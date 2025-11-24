@@ -1,4 +1,4 @@
 package org.example.trading.api.model;
 
-public class ApiResponse {
+public class ApiResponse<T> {
 }
